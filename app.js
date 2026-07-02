@@ -10,12 +10,10 @@ app.get("/", function(req, res) {
   let html = htmlContent
 
   const injectMetadata = async () => {
-    // this won't work becuase the link to fetch in production is confidential so i just show the example with comments
-    // const url = "https://example.com"
-    // const response = await fetch(url, {
-    //   method: "GET",
-    //   mode: "cors",
-    // });
+    // this won't work becuase in production the methods to fetch with queries are confidential so i just show the example with comments
+    // const url = "https://example.com/route?query1=example1&query2=example2"
+    // fetch campaign storefront data with multiple steps by the queries
+    // ...
     // const res = await response.json();
     // use const { desc, icon, ... } = res, etc, for injection
 
