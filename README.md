@@ -3,6 +3,15 @@
 A lightweight Express service that solves Open Graph limitations for a
 React single-page app, without requiring a full SSR migration.
 
+## Try it
+
+Paste this link into a social app's message box (Messenger, WhatsApp, etc.)
+and watch it generate a preview:
+
+https://redirect.bzquick.com/_c?demo@bzquick.com?Bakery2023
+
+<img src="https://github.com/heyoboo/metadata-proxy/blob/bae2a36197f84b2fc423a08ac6bfafd41fdef4c2/Screenshot_20260702_082458_Chrome.jpg" />
+
 ## The problem
 
 Social apps (WhatsApp, iMessage, Discord, etc.) generate link previews by
@@ -45,19 +54,11 @@ user experience.
 5. A real visitor who clicks the link (rather than a crawler generating a
    preview) is redirected to the actual storefront page.
 
-## Try it
-
-Paste this link into a social app's message box (WhatsApp, iMessage, etc.)
-and watch it generate a preview:
-
-https://redirect.bzquick.com/_c?demo@bzquick.com?Bakery2023
-
-<img src="https://github.com/heyoboo/metadata-proxy/blob/bae2a36197f84b2fc423a08ac6bfafd41fdef4c2/Screenshot_20260702_082458_Chrome.jpg" />
-
 ## Running locally
 
 ```bash
-npm install && npm start
+npm install
+npm start
 ```
 
 The server runs on `http://localhost:3000` (or `$PORT` if set).
