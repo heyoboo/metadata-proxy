@@ -10,14 +10,20 @@ app.get("/", function(req, res) {
   let html = htmlContent
 
   const injectMetadata = async () => {
-    // this won't work becuase in production the methods to fetch with queries are confidential so i just show the example with comments
-    // const url = "https://example.com/route?query1=example1&query2=example2"
-    // fetch campaign storefront data with multiple steps by the queries
-    // ...
-    // const res = await response.json();
-    // use const { desc, icon, ... } = res, etc, for injection
-
-    // TODO add try carch and 404
+    // Production resolves metadata in two steps:
+    // 1. Destructure the relevant params off req.query
+    // 2. Fetch #1 resolves the first param to an initial record
+    // 3. Fetch #2 uses that result + the second param to get the final
+    //    data used to populate the tags below
+    //
+    // const { param1, param2 } = req.query
+    // const first = await fetchStep1(param1)
+    // const data = await fetchStep2(first, param2)
+    // const { desc, icon } = data
+    //
+    // These hit internal APIs that aren't reachable outside our infra
+    // (and the exact lookup scheme is intentionally not detailed here),
+    // so this is a stand-in example using hardcoded values.
     const desc = 'some description'
     const icon = 'https://img.freepik.com/free-vector/simple-vibing-cat-square-meme_742173-4493.jpg'
     html = html.replace("__TITLE__", desc);
