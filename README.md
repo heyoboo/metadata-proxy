@@ -1,5 +1,3 @@
-# A minimum demo for html metadata injection through express.js
-
 Paste this working link on your social apps to see the sharing preview result:
 https://redirect.bzquick.com/_c?demo@bzquick.com?Bakery2023
 
