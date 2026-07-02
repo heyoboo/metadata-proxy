@@ -5,8 +5,7 @@ React single-page app, without requiring a full SSR migration.
 
 ## Try it
 
-Paste this link into a social app's message box (Messenger, WhatsApp, etc.)
-and watch it generate a preview:
+Paste this link into a social app's message box and watch it generate a preview:
 
 https://redirect.bzquick.com/_c?demo@bzquick.com?Bakery2023
 
@@ -57,8 +56,7 @@ user experience.
 ## Running locally
 
 ```bash
-npm install
-npm start
+npm install && npm start
 ```
 
 The server runs on `http://localhost:3000` (or `$PORT` if set).
